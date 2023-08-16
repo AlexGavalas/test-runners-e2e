@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:e2e": "nightwatch test/login.spec.jsx --devtools"
+    "test:e2e": "nightwatch test/login.spec.jsx --devtools",
+    "playwright": "playwright test"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -18,6 +19,7 @@
     "@nightwatch/apitesting": "^0.2.1",
     "@nightwatch/react": "^0.4.1",
     "@nightwatch/testing-library": "^0.1.1",
+    "@playwright/test": "^1.30.0",
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
