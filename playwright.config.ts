@@ -4,8 +4,12 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./e2e-playwright",
 
+  snapshotPathTemplate:
+    "{testDir}/__screenshots__/{testFilePath}/{arg}_{projectName}{ext}",
+
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
+
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
@@ -80,10 +84,4 @@ export default defineConfig({
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
 });
